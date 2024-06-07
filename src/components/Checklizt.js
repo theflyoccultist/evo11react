@@ -3,7 +3,7 @@ import './Checklizt.css';
 
 const Checklizt = () => {
     return (
-        <div className= 'grid-wrapper'>
+        <div className= 'checklizt-wrapper'>
             <h2 className='title'>Checklist</h2>
                 <div className='checklizt-container'>
                     <div className='checklizt-item'>
