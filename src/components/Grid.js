@@ -3,7 +3,8 @@ import './Grid.css';
 
 const Grid = () => {
     return (
-
+    <div className='grid-wrapper'>
+        <h2 className='title'>Morning Routine</h2>
         <div className='grid-container'>
             <div className='grid-item'>
                 <input type='checkbox' id='item1'/>
@@ -30,6 +31,8 @@ const Grid = () => {
                 <label htmlFor='item6'>Perfume</label>
             </div>
         </div>
+    </div>
+
     );
 };
 
