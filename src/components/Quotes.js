@@ -3,20 +3,27 @@ import quotesData from './quotes.json';
 import './Quotes.css';
 
 const Quotes = () => {
-    const [quotes, setQuotes] = useState([]);
+    const [quote, setQuote] = useState(null);
+
     useEffect(() => {
-        setQuotes(quotesData);
+        const getRandomQuote = () => {
+            const randomIndex = Math.floor(Math.random() * quotesData.length);
+            return quotesData[randomIndex];
+        };
+        setQuote(getRandomQuote());
     }, []);
 
     return(
         <div className='grid-wrapper'>
-            <h2 className='title'>Daily Quotes</h2>
+            <h2 className='title'>Quote of the day</h2>
             <div className='quote-container'>
-                {quotes.map((quote) => (
+                {quote ? (
                     <blockquote>
                     "{quote.text}"
                     </blockquote>
-                ))}
+                ) : (
+                    <p>Loading...</p>
+                )}
             </div>
         </div>
     );
