@@ -6,3 +6,7 @@ so far includes the layout for:
 - a morning routine checklist
 - a photo gallery
 - a long term checklist
+
+to add:
+- better CSS
+- premade long term checklist (import JSON data?)
